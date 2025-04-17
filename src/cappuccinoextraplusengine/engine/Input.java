@@ -9,15 +9,15 @@ import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
 
 public class Input implements KeyListener, MouseListener, MouseMotionListener, MouseWheelListener {
-    private GamePanel gamePanel;
+    private final GamePanel gamePanel;
     
     private final int NUM_KEYS = 256;
-    private boolean[] keys = new boolean[NUM_KEYS];
-    private boolean[] keysLast = new boolean[NUM_KEYS];
+    private final boolean[] keys = new boolean[NUM_KEYS];
+    private final boolean[] keysLast = new boolean[NUM_KEYS];
 
     private final int NUM_BUTTONS = 5;
-    private boolean[] buttons= new boolean[NUM_BUTTONS];
-    private boolean[] buttonsLast = new boolean[NUM_BUTTONS];
+    private final boolean[] buttons= new boolean[NUM_BUTTONS];
+    private final boolean[] buttonsLast = new boolean[NUM_BUTTONS];
 
     private int mouseX, mouseY;
     private int scroll;

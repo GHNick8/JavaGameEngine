@@ -11,9 +11,9 @@ public class GamePanel implements Runnable {
 
     private boolean running = false;
     private final double update = 1.0/60.0;
-    private int width = 320, height = 240;
+    private int width, height;
     // Scale window 
-    private float scale = 2f;
+    private float scale;
     private String title = "CappuccinoExtraPlusEnginev1.0";
 
     public GamePanel(AbstractGame game) {
@@ -83,6 +83,7 @@ public class GamePanel implements Runnable {
                 // Comment out renderer.clear(); for drawing with image effect 
                 renderer.clear();
                 game.render(this, renderer);
+                renderer.process();
                 renderer.drawText("FPS:" + FPS, 0, 0, 0xff00ffff);
                 window.update();
                 frames++;
