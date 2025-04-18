@@ -1,6 +1,9 @@
 package cappuccinoextraplusengine.engine.gfx;
 
 public class Light {
+    public static final int NONE = 0;
+    public static final int FULL = 1;
+
     private int radius, diameter, color;
     private int[] lm;
 

@@ -35,9 +35,7 @@ public class SoundClip {
 
             gainControl = (FloatControl)clip.getControl(FloatControl.Type.MASTER_GAIN);
 
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-        }
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {}
     }
 
     public void play() {

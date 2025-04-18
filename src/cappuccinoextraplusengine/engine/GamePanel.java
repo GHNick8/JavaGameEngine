@@ -43,6 +43,7 @@ public class GamePanel implements Runnable {
 
         double frameTime = 0;
         int frames = 0;
+        @SuppressWarnings("unused")
         int FPS = 0;
 
         while (running) {
@@ -84,16 +85,14 @@ public class GamePanel implements Runnable {
                 renderer.clear();
                 game.render(this, renderer);
                 renderer.process();
-                renderer.drawText("FPS:" + FPS, 0, 0, 0xff00ffff);
+                // renderer.drawText("FPS:" + FPS, 0, 0, 0xff00ffff);
                 window.update();
                 frames++;
             }
             else {
                 try {
                     Thread.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                } catch (InterruptedException e) {}
             }
         }
 

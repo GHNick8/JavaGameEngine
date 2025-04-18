@@ -8,14 +8,13 @@ public class Image {
     private int w, h;
     private int[] p;
     private boolean alpha = false;
+    private int lightBlock = Light.NONE;
 
     public Image(String path) {
         BufferedImage image = null;
         try {
             image = ImageIO.read(Image.class.getResourceAsStream(path));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) {}
 
         w = image.getWidth();
         h = image.getHeight();
@@ -60,5 +59,13 @@ public class Image {
 
     public void setAlpha(boolean alpha) {
         this.alpha = alpha;
+    }
+
+    public int getLightBlock() {
+        return lightBlock;
+    }
+
+    public void setLightBlock(int lightBlock) {
+        this.lightBlock = lightBlock;
     }
 }
